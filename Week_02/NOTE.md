@@ -18,3 +18,11 @@
 
 获取队列头部元素但不删除：`E element()` /  `E peek()`
 
+
+
+
+
+> ```
+> // 删除指定元素number
+> priorityQueue.remove(number);
+> ```

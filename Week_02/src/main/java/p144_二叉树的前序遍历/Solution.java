@@ -13,12 +13,12 @@ public class Solution {
     }
 
     private void preorderTraversalHelper(TreeNode root, List<Integer> res) {
-        if (root != null) {
-            res.add(root.val);
-            preorderTraversalHelper(root.left, res);
-            preorderTraversalHelper(root.right, res);
-
+        if (root == null) {
+            return;
         }
+        res.add(root.val);
+        preorderTraversalHelper(root.left, res);
+        preorderTraversalHelper(root.right, res);
 
     }
 }

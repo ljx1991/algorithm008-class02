@@ -18,15 +18,12 @@ public class Solution {
     }
 
     public void inorderTraversalHelper(TreeNode node, List<Integer> res) {
-        if (node != null) {
-            if (node.left != null) {
-                inorderTraversalHelper(node.left, res);
-            }
-            res.add(node.val);
-            if (node.right != null) {
-                inorderTraversalHelper(node.right, res);
-            }
+        if (node == null) {
+            return;
         }
+        inorderTraversalHelper(node.left, res);
+        res.add(node.val);
+        inorderTraversalHelper(node.right, res);
     }
 
 }

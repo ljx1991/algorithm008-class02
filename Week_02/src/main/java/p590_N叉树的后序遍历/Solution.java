@@ -14,7 +14,6 @@ public class Solution {
 
     private void postOrderHelper(Node root, List<Integer> res) {
         if (root == null) return;
-
         for (Node child : root.children) {
             postOrderHelper(child, res);
         }

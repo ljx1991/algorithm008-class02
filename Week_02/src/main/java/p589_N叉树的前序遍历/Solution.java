@@ -9,11 +9,16 @@ public class Solution {
 
     public List<Integer> preorder(Node root) {
         List<Integer> res = new ArrayList<Integer>();
-        if (root == null) return res;
+        preorderHelper(root, res);
+        return res;
+    }
+
+    private void preorderHelper(Node root, List<Integer> res) {
+        if (root == null) return;
         res.add(root.val);
         for (Node cur : root.children) {
-            res.addAll(preorder(cur));
+            preorderHelper(cur, res);
         }
-        return res;
+
     }
 }
